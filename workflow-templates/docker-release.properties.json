@@ -1,0 +1,12 @@
+{
+    "name": "Docker Release Workflow",
+    "description": "Docker release workflow template.",
+    "iconName": "docker",
+    "categories": [
+        "Docker"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile*"
+    ]
+}

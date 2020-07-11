@@ -1,0 +1,12 @@
+{
+    "name": "Docker Compose Test Workflow",
+    "description": "Docker Compose test workflow template.",
+    "iconName": "docker-compose",
+    "categories": [
+        "Docker"
+    ],
+    "filePatterns": [
+        "compose_*.yml",
+        "compose_*.yaml"
+    ]
+}

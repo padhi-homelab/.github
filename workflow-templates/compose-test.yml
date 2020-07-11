@@ -7,7 +7,7 @@ on:
     branches: master
 
 jobs:
-  test--pihole_cloudflared:
+  test--<service>:
     runs-on: ubuntu-latest
     steps:
       -
@@ -16,7 +16,7 @@ jobs:
       -
         name: "Compose: Prepare"
         run: |
-          cd '<PROJECT>'
+          cd '<service>'
       -
         name: "Compose: Start"
         run: |

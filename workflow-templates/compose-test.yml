@@ -7,16 +7,22 @@ on:
     branches: master
 
 jobs:
-  test:
+  test--pihole_cloudflared:
     runs-on: ubuntu-latest
     steps:
       -
         name: "Git: Checkout"
         uses: actions/checkout@v2
       -
+        name: "Docker: Compose prepare"
+        run: |
+          cp '<project>/docker-compose.yml' .
+      -
         name: "Docker: Compose start"
-        run: docker-compose up -d
+        run: |
+          docker-compose up -d
+          sleep 5s
       -
         name: "Docker: Compose test"
         run: |
-          docker-compose run <service> <cmd>
+          docker-compose exec -T <service> <cmd> <arg>...

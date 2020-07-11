@@ -6,7 +6,7 @@
         "Docker"
     ],
     "filePatterns": [
-        "compose_*.yml",
-        "compose_*.yaml"
+        "compose_.*.yml",
+        "compose_.*.yaml"
     ]
 }

@@ -14,15 +14,18 @@ jobs:
         name: "Git: Checkout"
         uses: actions/checkout@v2
       -
-        name: "Docker: Compose prepare"
+        name: "Compose: Prepare"
         run: |
-          cd '<project>'
+          cd '<PROJECT>'
       -
-        name: "Docker: Compose start"
+        name: "Compose: Start"
         run: |
           docker-compose up -d
-          sleep 5s
       -
-        name: "Docker: Compose test"
+        name: "Compose: Wait"
         run: |
-          docker-compose exec -T <service> <cmd> <arg>...
+          sleep <SECONDS>s
+      -
+        name: "Compose: Test"
+        run: |
+          docker-compose exec -T <SERVICE> <COMMAND> <ARG>...
